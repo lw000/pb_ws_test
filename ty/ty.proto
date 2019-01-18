@@ -1,0 +1,42 @@
+syntax="proto3";
+
+package ty;
+
+message ReqHeart{
+}
+
+message AckHeart{
+}
+
+message ReqEcho{
+    int64 id = 1;
+	int64 tm =2;
+    string data = 3;
+}
+
+message AckEcho{
+    uint32 code = 1;
+    string data = 2;
+}
+
+message ReqLogin{
+    int64 id = 1;
+	int64 tm =2;
+    string data = 3;
+}
+
+message AckLogin{
+    int64 code = 1;
+    string data = 2;
+}
+
+message ReqLogout{
+    int64 id = 1;
+	int64 tm =2;
+    string data = 3;
+}
+
+message AckLogout{
+    uint32 code = 1;
+    string data = 2;
+}
