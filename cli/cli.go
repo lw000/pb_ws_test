@@ -78,9 +78,6 @@ func main() {
 		return
 	}
 
-	interrupt := make(chan os.Signal, 1)
-	signal.Notify(interrupt, os.Interrupt)
-
 	var err error
 	ws = tyws.DefaultAyncClient(30, 1024)
 	err = ws.Open("ws", *addr, "/ws")
@@ -94,6 +91,9 @@ func main() {
 	}
 
 	SendTest()
+
+	interrupt := make(chan os.Signal, 1)
+	signal.Notify(interrupt, os.Interrupt)
 
 	for {
 		select {
