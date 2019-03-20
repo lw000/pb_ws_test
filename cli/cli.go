@@ -9,7 +9,7 @@ import (
 	"os/signal"
 	"sync/atomic"
 	"time"
-	"tuyue/tuyue_common/ws/cli"
+	"tuyue/tuyue_common/network/ws/cli"
 
 	log "github.com/alecthomas/log4go"
 )
