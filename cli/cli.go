@@ -10,6 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 	"tuyue/tuyue_common/network/ws/cli"
+	"tuyue/tuyue_common/network/ws/cli/clic"
 
 	log "github.com/alecthomas/log4go"
 )
@@ -18,7 +19,7 @@ var addr = flag.String("addr", "localhost:8080", "http service address")
 
 // var addr = flag.String("addr", "192.168.1.168:8830", "http service address")
 
-var ws *tyws.WSClient
+var ws *tyclic.WSClient
 var cfg *config.Config
 
 var reqId int64
